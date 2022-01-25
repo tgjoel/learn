@@ -1,0 +1,13 @@
+.idea
+*.iml
+out/
+client/out/
+
+.gradle
+build
+bin
+.DS_Store
+.checkstyle
+.settings
+*.hprof
+
