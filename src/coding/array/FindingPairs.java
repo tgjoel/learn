@@ -19,11 +19,11 @@ public class FindingPairs {
 
         int count = 0;
         for (Integer i : numList) {
-            if(Objects.nonNull(numMap.get(i-k))) {
-                count++;
-            } else if(Objects.nonNull(numMap.get(i+k))){
-                count++;
-            }
+           if(Objects.nonNull(numMap.get(i-k))) {
+               count++;
+           } else if(Objects.nonNull(numMap.get(i+k))){
+               count++;
+           }
         }
         if(count !=0) {
             System.out.println("Total count: " + count/2);
