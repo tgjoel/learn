@@ -1,4 +1,4 @@
-package problem;
+package coding.problem;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

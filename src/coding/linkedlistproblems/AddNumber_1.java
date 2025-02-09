@@ -7,16 +7,15 @@ public class AddNumber_1 {
 	public static void main(String[] args) {
 		
 		LinkedList5 first = new LinkedList5();
-		first.append(7);
-		first.append(5);
-		first.append(9);
+		first.append(2);
 		first.append(4);
-		first.append(6);
+		first.append(3);
 		
 		System.out.println("First List: ");
 		first.print();
 		LinkedList5 second = new LinkedList5();
-		second.append(8);
+		second.append(5);
+		second.append(6);
 		second.append(4);
 		System.out.println();
 		System.out.println("Second List: ");
@@ -32,42 +31,42 @@ public class AddNumber_1 {
 	
 		
 	public static LinkedList5 addNumber(Node5 first, Node5 second) {
-		
-		if(first == null && second == null) {
+
+		if (first == null && second == null) {
 			System.out.println("Both list are null");
 			return null;
 		}
-		
+
 		LinkedList5 resultant = new LinkedList5();
 		int carry = 0, sum = 0, n1, n2;
-		
-		while(first != null ||  second !=null) {
-			
-			n1 = first != null ? first.data: 0;
-			n2 = second !=null ? second.data: 0;
-			
+
+		while (first != null || second != null) {
+
+			n1 = first != null ? first.data : 0;
+			n2 = second != null ? second.data : 0;
+
 			sum = n1 + n2 + carry;
-			
-			carry = sum/10;
-			sum = sum%10;
-				
-			
+
+			carry = sum / 10;
+			sum = sum % 10;
+
+
 			resultant.append(sum);
-			if(first != null) {
+			if (first != null) {
 				first = first.next;
 			}
-			if(second !=null) {
+			if (second != null) {
 				second = second.next;
 			}
-		
+
 		}
-		
-		if(carry ==1) {
+
+		if (carry == 1) {
 			resultant.append(carry);
 		}
-	 
-		return resultant;	
-		
+
+		return resultant;
+
 	}
 
 }

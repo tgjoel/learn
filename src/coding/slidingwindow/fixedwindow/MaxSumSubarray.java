@@ -1,4 +1,4 @@
-package slidingwindow.fixedwindow;
+package coding.slidingwindow.fixedwindow;
 
 public class MaxSumSubarray {
     public static void main( String[] args ) {

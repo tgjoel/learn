@@ -1,5 +1,4 @@
-package slidingwindow.variablewindow;
-
+package coding.slidingwindow.variablewindow;
 
 // this problem only solves for the positive numbers
 public class LargestSubarrayOfSumKForPositiveIntegers {
