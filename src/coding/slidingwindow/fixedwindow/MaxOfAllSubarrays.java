@@ -1,4 +1,4 @@
-package slidingwindow.fixedwindow;
+package coding.slidingwindow.fixedwindow;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

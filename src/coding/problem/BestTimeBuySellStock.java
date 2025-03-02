@@ -1,4 +1,4 @@
-package problem;
+package coding.problem;
 
 //121. Best Time to Buy and Sell Stock
 public class BestTimeBuySellStock {

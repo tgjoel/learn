@@ -1,4 +1,4 @@
-package problem;
+package coding.problem;
 
 
 //https://leetcode.com/problems/intersection-of-two-linked-lists/solutions/49785/java-solution-without-knowing-the-difference-in-len/

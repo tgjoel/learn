@@ -1,4 +1,4 @@
-package problem;
+package coding.problem;
 
 public class ArrayConcatenation {
     public static void main( String[] args ) {
