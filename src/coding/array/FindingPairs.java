@@ -1,4 +1,4 @@
-package coding.array;
+package learn.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
