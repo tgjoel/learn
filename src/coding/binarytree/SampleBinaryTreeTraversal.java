@@ -6,11 +6,11 @@ import java.util.Queue;
 public class SampleBinaryTreeTraversal {
 	public static void main(String[] args) {
 		BT1 tree = new BT1();
-		tree.root = new Node1(1);
-        tree.root.left = new Node1(2);
-        tree.root.right = new Node1(3);
-        tree.root.left.left = new Node1(4);
-        tree.root.left.right = new Node1(5);
+		tree.root = new Node111(1);
+        tree.root.left = new Node111(2);
+        tree.root.right = new Node111(3);
+        tree.root.left.left = new Node111(4);
+        tree.root.left.right = new Node111(5);
         
         
         //Depth first traversal
@@ -25,18 +25,18 @@ public class SampleBinaryTreeTraversal {
 	}
 
 }
-	class Node1 {
+	class Node111 {
 		int val;
-		Node1 right, left;
+		Node111 right, left;
 		
-		Node1(int val) {
+		Node111(int val) {
 			this.val = val;
 			this.right = left = null;
 		}
 	}
 	
 	class BT1 {
-		Node1 root;
+		Node111 root;
 		
 		BT1() {
 			root = null;
@@ -44,12 +44,12 @@ public class SampleBinaryTreeTraversal {
 		
 		public void levelOrderTraversal() {
 			
-			Queue<Node1> queue = new LinkedList<>();
+			Queue<Node111> queue = new LinkedList<>();
 			queue.add(this.root);
 			
 			while(!queue.isEmpty()) {
 				
-				Node1 tmp = queue.remove();
+				Node111 tmp = queue.remove();
 				
 				if(tmp.left !=null) {
 					queue.add(tmp.left);
@@ -76,7 +76,7 @@ public class SampleBinaryTreeTraversal {
 			this.postOderTraversal(root);
 		}
 		 
-		void preOderTraversal(Node1 n1) {
+		void preOderTraversal(Node111 n1) {
 			
 			if(n1 == null) {
 				return;
@@ -88,7 +88,7 @@ public class SampleBinaryTreeTraversal {
 			
 		}
 		
-		void inOderTraversal(Node1 n1) {
+		void inOderTraversal(Node111 n1) {
 			
 			if(n1 == null) {
 				return;
@@ -100,7 +100,7 @@ public class SampleBinaryTreeTraversal {
 			
 		}
 		
-		void postOderTraversal(Node1 n1) {
+		void postOderTraversal(Node111 n1) {
 			
 			if(n1 == null) {
 				return;

@@ -1,4 +1,4 @@
-package slidingwindow.fixedwindow;
+package coding.slidingwindow.fixedwindow;
 
 public class MaxSumDistinctSubarray {
 

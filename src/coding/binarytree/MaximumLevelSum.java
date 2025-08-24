@@ -1,4 +1,4 @@
-package learn.binarytree;
+package coding.binarytree;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -7,16 +7,16 @@ import java.util.Queue;
 
 public class MaximumLevelSum {
     public static void main( String[] args ) {
-        Node2 root = new Node2(10);
-        root.left = new Node2(20);
-        root.right = new Node2(30);
-        root.left.left = new Node2(84);
-        root.left.right = new Node2(52);
-        root.right.left = new Node2(97);
-        root.right.right = new Node2(48);
-        root.right.right.left = new Node2(64);
-        root.right.right.right = new Node2(-7);
-        root.right.left.left = new Node2(87);
+        Node22 root = new Node22(10);
+        root.left = new Node22(20);
+        root.right = new Node22(30);
+        root.left.left = new Node22(84);
+        root.left.right = new Node22(52);
+        root.right.left = new Node22(97);
+        root.right.right = new Node22(48);
+        root.right.right.left = new Node22(64);
+        root.right.right.right = new Node22(-7);
+        root.right.left.left = new Node22(87);
         BinaryTree2 bt = new BinaryTree2();
         bt.root = root;
        System.out.println("Maximum Level Sum Iterative: "+ bt.maxLevelSumIterative(root));
@@ -25,17 +25,17 @@ public class MaximumLevelSum {
 }
 
 class BinaryTree2 {
-    Node2 root;
+    Node22 root;
 
-    public int maxLevelSumIterative(Node2 node) {
+    public int maxLevelSumIterative(Node22 node) {
         int max = Integer.MIN_VALUE;
-        Queue<Node2> queue = new LinkedList<>();
+        Queue<Node22> queue = new LinkedList<>();
         queue.add(node);
         while(!queue.isEmpty()) {
             int levelLength = queue.size();
             int result = 0;
             while(levelLength > 0) {
-                Node2 currNode = queue.remove();
+                Node22 currNode = queue.remove();
                 result +=currNode.data;
                 if(currNode.left!= null) {
                     queue.add(currNode.left);
@@ -51,14 +51,14 @@ class BinaryTree2 {
     }
 
 
-    public int maxLevelSumRecursion( Node2 root ) {
+    public int maxLevelSumRecursion( Node22 root ) {
             Map<Integer, Integer> levelSumMap = new HashMap<>();
             calculateLevelSum(root, 0, levelSumMap);
             return levelSumMap.values().stream().max(Integer::compareTo).get();
 
     }
 
-    private void calculateLevelSum(Node2 root, int level, Map<Integer, Integer> levelSumMap) {
+    private void calculateLevelSum(Node22 root, int level, Map<Integer, Integer> levelSumMap) {
         if(root == null)   return;
         levelSumMap.put(level, levelSumMap.getOrDefault(level,0) + root.data);
         calculateLevelSum(root.left, level+1, levelSumMap);
@@ -66,10 +66,10 @@ class BinaryTree2 {
     }
 }
 
-class Node2 {
+class Node22 {
     int data;
-    Node2 left, right;
-    public Node2( int data ) {
+    Node22 left, right;
+    public Node22( int data ) {
         this.data = data;
     }
 }

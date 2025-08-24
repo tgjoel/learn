@@ -1,6 +1,4 @@
-package learn.binarytree;
-
-import org.w3c.dom.Node;
+package coding.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;

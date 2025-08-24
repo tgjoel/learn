@@ -1,4 +1,4 @@
-package learn.binarysearchtree;
+package coding.binarysearchtree;
 
 public class TreeDelete {
 

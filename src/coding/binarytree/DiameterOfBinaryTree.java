@@ -1,7 +1,4 @@
-package learn.binarytree;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package coding.binarytree;
 
 public class DiameterOfBinaryTree {
     public static void main( String[] args ) {

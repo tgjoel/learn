@@ -8,7 +8,8 @@ public class MaxOfAllSubarrays {
 
     public static void main( String[] args ) {
 
-        int[] nums = {1,3,-1,-3,5,3,6,7};
+       // int[] nums = {1,3,-1,-3,5,3,6,7};
+        int[] nums = {2,1,3,-3,5,3,6,7};
         int k =3;
         int[] ans = maxSlidingWindow(nums, k);
         for (int i = 0; i < ans.length; i++) {
@@ -25,7 +26,7 @@ public class MaxOfAllSubarrays {
         Deque<Integer> tempList = new ArrayDeque<>();
 
         while(j < nums.length){
-            //calculation where the elements which are less than j is removed as they are of no use in the future calculation
+            //calculation where the elements which are less than j is removed as they are of no use as they can never be the ans
             // and the largest element will be at the index 0;
 
             while(!tempList.isEmpty() && tempList.peekLast() < nums[j]) {

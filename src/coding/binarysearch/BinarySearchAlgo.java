@@ -1,6 +1,5 @@
 package coding.binarysearch;
 
-import java.util.Arrays;
 
 public class BinarySearchAlgo {
     public static void main( String[] args ) {
