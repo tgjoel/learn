@@ -1,6 +1,6 @@
 package coding.knapsack;
 
-public class SubsetSum {
+public class SubsetSum01 {
 
     public static void main(String[] args) {
         int[] arr = {3, 34, 4, 12, 5, 2};

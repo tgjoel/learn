@@ -3,7 +3,7 @@ package coding.knapsack;
 import java.util.Arrays;
 
 //https://leetcode.com/problems/partition-equal-subset-sum/description/
-public class EqualSumPartition {
+public class EqualSumPartition02 {
 
     public static void main(String[] args) {
         int[] nums = {1, 5, 11, 5};
@@ -19,7 +19,7 @@ public class EqualSumPartition {
             return false;
         }
         // now we need to only find out one subset with target = sum/2;
-        //same as the subsets um problem
+        //same as the subsets sum problem
         int target = sum / 2;
 
         boolean[][] dp = new boolean[nums.length + 1][target + 1];
