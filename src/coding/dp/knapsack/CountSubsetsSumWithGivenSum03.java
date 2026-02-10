@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 public class CountSubsetsSumWithGivenSum03 {
     public static void main(String[] args) {

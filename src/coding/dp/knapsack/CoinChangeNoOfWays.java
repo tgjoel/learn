@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 // https://leetcode.com/problems/coin-change-ii
 public class CoinChangeNoOfWays {

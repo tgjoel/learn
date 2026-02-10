@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 public class SubsetSum01 {
 

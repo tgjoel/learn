@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 public class CoinChangeMinimumCoins {
     public static void main(String[] args) {

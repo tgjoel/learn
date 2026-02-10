@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 
 // Need to assign signs (+ve or -ve) to the provided numbers so after that their sum equals the provided target sum. Need to such count

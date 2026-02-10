@@ -1,4 +1,4 @@
-package coding.knapsack;
+package coding.dp.knapsack;
 
 /**
  * Given a rod of length n inches and an array price[], where price[i] denotes the value of a piece of length i.
