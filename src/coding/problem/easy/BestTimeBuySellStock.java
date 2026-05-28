@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 //121. Best Time to Buy and Sell Stock
 public class BestTimeBuySellStock {
@@ -12,13 +12,10 @@ public class BestTimeBuySellStock {
         int leastValue = Integer.MAX_VALUE;
         int onDayProfit = 0;
         for (int i =0; i< prices.length;i++) {
-            if(prices[i] < leastValue) {
-                leastValue = prices[i];
-            }
+            leastValue =  Math.min(prices[i],leastValue);
             onDayProfit = prices[i] - leastValue;
-            if(onDayProfit > maxProfit) {
-                maxProfit = onDayProfit;
-            }
+
+            maxProfit =  Math.max(maxProfit,onDayProfit);
         }
         return maxProfit;
     }

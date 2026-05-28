@@ -18,7 +18,7 @@ public class ReverseAfterK {
         l1.append(100);
         l1.print();
         System.out.println();
-        l1.reverse(3);
+        l1.reverse(5);
         l1.print();
 
     }
@@ -68,34 +68,38 @@ class L1 {
         tmp.next = n;
     }
 
-    public void reverse(int k) {
+//    public void reverse(int k) {
+//
+//        if (head == null) {
+//            System.out.println("empty list");
+//            return;
+//        }
+//
+//        head = reverse(head, k);
+//    }
 
+    public void reverse( int k) {
         if (head == null) {
-            System.out.println("empty list");
             return;
         }
 
-        head = reverse(head, k);
-    }
-
-    private N1 reverse(N1 head, int k) {
-
         N1 curr = head;
-        N1 next = null;
+        N1 next;
         N1 prev = null;
-        int count = 0;
-        while (curr != null && count < k) {
+        while (curr != null && k > 0) {
             next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
-            count++;
+            k--;
         }
 
-        if (curr != null) {
-            head.next = reverse(curr, k);
-        }
-        return prev;
+        head.next = curr;
+//
+//        if (curr != null) {
+//            head.next = reverse(curr, k);
+//        }
+        this.head = prev;
     }
 }
 

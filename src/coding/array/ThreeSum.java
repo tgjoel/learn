@@ -5,9 +5,7 @@ package coding.array;
 i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0
 Notice that the solution set must not contain duplicate triplets.
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class ThreeSum {
@@ -16,14 +14,18 @@ public class ThreeSum {
       //  int[] nums = {1,2,-2,-1}; //ans = 0
         int[] nums = {-1,0,1,2,-1,-4,-2,-3,3,0,4};
         List<List<Integer>> ans = threeSum(nums);
-        System.out.println();
+        System.out.println(ans);
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums);
-        for (int i = 0; i < n; i++) {
+
+        // if the smallest element is greater than 0, then there is no way the sum can be 0
+        if (nums[0] > 0)  return ans;
+
+        for (int i = 0; i < n - 2; i++) {
             // if adjacent are same its already taken into consideration hence skipping that
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             int j = i + 1;

@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 public class SearchInsertPosition {
     public static void main( String[] args ) {

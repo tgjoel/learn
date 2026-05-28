@@ -1,10 +1,18 @@
-package coding.problem;
+package coding.linkedlistproblems;
 
 
-//https://leetcode.com/problems/intersection-of-two-linked-lists/solutions/49785/java-solution-without-knowing-the-difference-in-len/
+class ListNode2 {
+    int val;
+    ListNode2 next;
+
+    ListNode2( int x ) {
+        val = x;
+        next = null;
+    }
+}
 
 public class IntersectionTwoLinkedLists {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         ListNode2 node1 = new ListNode2(4);
         ListNode2 node2 = new ListNode2(1);
         ListNode2 node3 = new ListNode2(8);
@@ -31,22 +39,22 @@ public class IntersectionTwoLinkedLists {
 
     }
 
-    public static ListNode2 getIntersectionNodeWithoutLength( ListNode2 headA, ListNode2 headB ) {
+    public static ListNode2 getIntersectionNodeWithoutLength(ListNode2 headA, ListNode2 headB) {
         if (headA == null || headB == null) {
             return null;
         }
         ListNode2 a = headA;
         ListNode2 b = headB;
 
-        while (a!=b) {  // comes out of loop when a==b. if no intersection then both will be null
+        while (a != b) {  // comes out of loop when a==b. if no intersection then both will be null
 
-            if(a==null) {  // when a becomes null, move a to start of B: A+B = B +A
-                a= headB;
+            if (a == null) {  // when a becomes null, move a to start of B: A+B = B +A
+                a = headB;
             } else {
                 a = a.next; // else move to next
             }
-            if(b==null) {
-                b= headA;
+            if (b == null) {
+                b = headA;
             } else {
                 b = b.next;
             }
@@ -55,7 +63,7 @@ public class IntersectionTwoLinkedLists {
 
     }
 
-    public static ListNode2 getIntersectionNode1( ListNode2 headA, ListNode2 headB ) {
+    public static ListNode2 getIntersectionNode1(ListNode2 headA, ListNode2 headB) {
         if (headA == null || headB == null) {
             return null;
         }
@@ -88,7 +96,7 @@ public class IntersectionTwoLinkedLists {
         return headA;
     }
 
-    public static ListNode2 getIntersectionNode( ListNode2 headA, ListNode2 headB ) {
+    public static ListNode2 getIntersectionNode(ListNode2 headA, ListNode2 headB) {
         if (headA == null || headB == null) {
             return null;
         }
@@ -132,8 +140,8 @@ public class IntersectionTwoLinkedLists {
 
         ListNode2 interSec = null;
 
-        while (btemp!=null && atemp!=null) {
-            if(btemp == atemp) {
+        while (btemp != null && atemp != null) {
+            if (btemp == atemp) {
                 interSec = atemp;
                 break;
             } else {
@@ -143,15 +151,5 @@ public class IntersectionTwoLinkedLists {
         }
         return interSec;
 
-    }
-}
-
-class ListNode2 {
-    int val;
-    ListNode2 next;
-
-    ListNode2( int x ) {
-        val = x;
-        next = null;
     }
 }

@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 public class PascalTriangle {
     public static void main( String[] args ) {
         List<List<Integer>> s = generate(5);
-        s.forEach(s1->s1.forEach(System.out::println));
+        s.forEach(s1->s1.forEach(System.out::print));
     }
     public static List<List<Integer>> generate( int numRows) {
 
@@ -34,5 +34,25 @@ public class PascalTriangle {
             ansList.add(newRow);
         }
         return ansList;
+    }
+
+    public static List<List<Integer>> generatePascalTriangle(int numsRows) {
+        List<List<Integer>> triangle = new ArrayList<>();
+
+        List<Integer> currRow = List.of(1);
+        triangle.add(currRow);
+
+        for(int i = 1; i < numsRows; i++) {
+            currRow = new ArrayList<>();
+            currRow.add(1);
+            List<Integer> previousRow = triangle.get(i-1);
+            for(int j = 1; j < previousRow.size(); j++) {
+                currRow.add(previousRow.get(j) + previousRow.get(j-1));
+            }
+            currRow.add(1);
+            triangle.add(currRow);
+        }
+
+        return triangle;
     }
 }

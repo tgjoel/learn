@@ -29,6 +29,7 @@ public class SplitAlternateLinkedList {
 		System.out.println();
 		System.out.print("Second list: ");
 		l2.print();
+        System.out.println();
 	}
 
 }

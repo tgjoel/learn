@@ -5,7 +5,7 @@ public class PartitionByK {
 	public static void main(String[] args) {
 		L02_2 l = new L02_2();
 		
-		l.append(70);
+		l.append(35);
 		l.append(90);
 		l.append(10);
 		l.append(20);
@@ -77,7 +77,6 @@ class L02_2 {
 	}
 	
 	public void partitionBeyondK(int k) {
-		
 		if(head == null) {
 			System.out.println("empty list");
 			return;

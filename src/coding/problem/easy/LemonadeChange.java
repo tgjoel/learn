@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 //860. Lemonade Change
 /*

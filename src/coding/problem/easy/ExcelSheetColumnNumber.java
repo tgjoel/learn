@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 public class ExcelSheetColumnNumber {
     public static void main( String[] args ) {

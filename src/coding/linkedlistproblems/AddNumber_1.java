@@ -9,8 +9,9 @@ public class AddNumber_1 {
 		LinkedList5 first = new LinkedList5();
 		first.append(2);
 		first.append(4);
-		first.append(3);
-		
+		first.append(9);
+		first.append(1);
+
 		System.out.println("First List: ");
 		first.print();
 		LinkedList5 second = new LinkedList5();

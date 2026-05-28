@@ -1,5 +1,6 @@
-package coding.problem;
+package coding.problem.easy;
 
+// 2108. Find First Palindromic String in the Array
 public class FindFirstPalindromicStringInArray {
     public static void main( String[] args ) {
 

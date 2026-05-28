@@ -19,6 +19,15 @@ public class RemoveDuplicates {
 		l1.deleteDuplicates();
 		System.out.println();
 		l1.print();
+
+        L01 l2 = new L01();
+
+        l2.addBeg(1);
+        l2.addBeg(1);
+        l2.addBeg(2);
+        l2.deleteSortedDuplicates(); // array will be sorted
+        System.out.println();
+        l2.print();
 	}
 }
 
@@ -71,15 +80,30 @@ class L01 {
 			N01 curr = tmp.next;
 			
 			while(curr !=null) {
-				N01 next = curr.next;
 				if(tmp.data == curr.data) {
 					prev.next = curr.next;
 				}
 				prev = curr;
-				curr = next;
+				curr = curr.next;
 			}
 			tmp = tmp.next;
 		}
-		
 	}
+
+    public N01 deleteSortedDuplicates() {
+        N01 prev = head;
+        N01 curr = head.next;
+
+        while(curr!=null) {
+            while(curr !=null && prev.data == curr.data) {
+                curr = curr.next;
+            }
+            prev.next = curr;
+            prev = prev.next;
+            if(curr != null) {
+                curr = curr.next;
+            }
+        }
+        return head;
+    }
 }

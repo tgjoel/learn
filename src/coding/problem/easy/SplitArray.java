@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.problem.easy;
 
 //3046. Split the Array
 public class SplitArray {

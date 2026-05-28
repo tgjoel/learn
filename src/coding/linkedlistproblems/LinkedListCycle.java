@@ -1,4 +1,4 @@
-package coding.problem;
+package coding.linkedlistproblems;
 
 public class LinkedListCycle {
     public static void main( String[] args ) {

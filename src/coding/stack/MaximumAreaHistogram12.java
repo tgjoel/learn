@@ -1,17 +1,15 @@
 package coding.stack;
 
-import concepts.interfacesample.A;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
-public class MaximumAreaHistogram {
+/// https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+public class MaximumAreaHistogram12 {
     public static void main(String[] args) {
         int[] arr = {6, 2, 5, 4, 5, 1, 6};
         int[] arr1 = {2,1,5,6,2,3};
         int[] arr2 = {1,1};
-        System.out.println(maximumAreaHistogram(arr2));
+        System.out.println(maximumAreaHistogram(arr));
     }
 
     private static int maximumAreaHistogram(int[] arr) {

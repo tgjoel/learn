@@ -1,10 +1,11 @@
-package coding.problem;
+package coding.problem.easy;
 //169: The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 public class MajorityElement {
     public static void main( String[] args ) {
         int[] nums = {2,2,1,3}; // not a valid input as the ans is not repeating more than n/2
         //int[] nums = {2,2,1,1,1,2,2};
         System.out.println(majorityElement1(nums));
+        System.out.println(majorityElement(new int[]{3,2,3}));
     }
     public static int majorityElement(int[] nums) {
         int majority = nums[0];

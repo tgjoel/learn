@@ -16,7 +16,7 @@ public class InfixToPostfix {
 
 	private static String infixToPostFix(String s) {
 		Stack<Character> stack = new Stack<>();
-		String result = "";
+		StringBuilder result = new StringBuilder();
 
 		for (int i = 0; i < s.length(); i++) {
 
@@ -24,16 +24,16 @@ public class InfixToPostfix {
 
 			if (!isOperator(ch)) {
 				//if operator directly adding to the result
-				result += ch;
+				result.append(ch);
 			} else if(stack.isEmpty() || ch == '(') {
 				// if opening bracket directly pushing to the stack  or if the stack is empty
 				stack.push(ch);
 			} else if(ch == ')') {
 				// if closing bracket then needs to pop until opening bracket
 				while(!stack.isEmpty() && stack.peek() != '(') {
-					result+=stack.pop();
+					result.append(stack.pop());
 				}
-				stack.pop(); // poping out the opening bracket
+				stack.pop(); // popping out the opening bracket
 			} else if(precedence(ch) > precedence(stack.peek()) || ch =='^') {
 				stack.push(ch);
 			} else {
@@ -42,7 +42,7 @@ public class InfixToPostfix {
 				//among this only ^ have right to left associativity and this is handled above hence poping out anyway
 				//if the precedence is less than the incoming poping out until the incoming is greater than or equal.
 				while(!stack.isEmpty() && precedence(ch) <= precedence(stack.peek())) {
-					result+=stack.pop();
+					result.append(stack.pop());
 				}
 				
 				stack.push(ch);
@@ -52,10 +52,10 @@ public class InfixToPostfix {
 		}
 		
 		while(!stack.isEmpty()) {
-			result+=stack.pop();
+			result.append(stack.pop());
 		}
 
-		return result;
+		return result.toString();
 	}
 
 	private static boolean isOperator(Character c) {

@@ -9,7 +9,7 @@ import java.util.Stack;
 // need to find if the array is circular
 public class NGR2 {
     public static void main(String[] args) {
-        int[] n = {1, 2, 1};
+        int[] n = {1,2,3,4,3};
         System.out.println(Arrays.toString(nextGreaterElements1(n)));
     }
 

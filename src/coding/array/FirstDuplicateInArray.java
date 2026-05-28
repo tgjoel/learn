@@ -11,12 +11,13 @@ public class FirstDuplicateInArray {
     }
 
     private static void solutionWithoutExtraSpace() {
-        int[] arr = {1,4,2,3,6,5};
+        int[] arr = {1,2,2,4};
         int ans = -1;
         for(int i = 0; i < arr.length; i++) {
-            /* gets the absolute value of element at i
-                changes element at that index to -ve if positive. if its already neagtive then its a duplicate
-                since our array contains only positive values.
+            /*
+            gets the absolute value of element at i
+            changes element at that index to -ve if positive. if its already negative then its a duplicate. since our array contains only positive values.
+            the largest number in the array is N. But the array will only have index from 0 to N-1. hence from the value need to reduce the 1 to find tha value in the array
              */
             int j = Math.abs(arr[i]);
             if(arr[j-1] > 0) { // need to reduce one as

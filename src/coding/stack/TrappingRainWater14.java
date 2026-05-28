@@ -2,7 +2,7 @@ package coding.stack;
 
 //https://leetcode.com/problems/trapping-rain-water/description/
 //Not a stack problem not related to the NGR/NGL or NSL/NSR even though looks like histogram
-public class TrappingRainWater {
+public class TrappingRainWater14 {
 
     public static void main(String[] args) {
         int arr[] = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};

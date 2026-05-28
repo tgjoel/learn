@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 //https://leetcode.com/problems/maximal-rectangle/description/
-public class MaximalRectangle {
+public class MaximalRectangle13 {
     public static void main(String[] args) {
         char[][] matrix = {
                 {'1', '0', '1', '0', '0'},

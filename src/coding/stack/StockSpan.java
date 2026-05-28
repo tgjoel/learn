@@ -1,4 +1,4 @@
-package coding.stackproblems;
+package coding.stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -7,7 +7,7 @@ public class StockSpan {
     public static void main(String[] args) {
         int[] input = {100, 80, 60, 70, 60, 75, 85};
         int[] span = calculateSpan(input);
-        Arrays.stream(span).forEach(System.out::print);
+        Arrays.stream(span).forEach(elem-> System.out.print(elem + " "));
     }
     private static int[] calculateSpan(int[] input) {
         int[] span = new int[input.length];

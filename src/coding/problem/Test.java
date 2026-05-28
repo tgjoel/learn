@@ -97,14 +97,14 @@ import java.util.TreeSet;
             super(0); // Either there should be default constructor in the superclass or need to call the super
             System.out.println("Inside B");
         }
-//        public void display() { //throws Exception {
-//            System.out.println();
-//        }
+        public void display() { //throws Exception {
+            System.out.println("Display in B");
+        }
     }
 
     class A1 {
         public void display() throws IOException {
-            System.out.println();
+            System.out.println("Display in A");
         }
     }
     class B1 extends A1 {

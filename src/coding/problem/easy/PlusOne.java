@@ -1,7 +1,5 @@
-package coding.problem;
+package coding.problem.easy;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Arrays;
 
 public class PlusOne {

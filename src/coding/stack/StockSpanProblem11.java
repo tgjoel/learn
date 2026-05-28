@@ -5,7 +5,7 @@ import java.util.Stack;
 
 //https://www.youtube.com/watch?v=p9T-fE1g1pU&list=PL_z_8CaSLPWdeOezg68SKkeLN4-T_jNHd&index=6&ab_channel=AdityaVerma
 // https://leetcode.com/problems/online-stock-span/
-public class StockSpanProblem {
+public class StockSpanProblem11 {
     public static void main(String[] args) {
         int[] arr = {100, 80, 60, 70, 60, 75, 85, 100};
 
@@ -24,7 +24,7 @@ public class StockSpanProblem {
         for (int i = 0; i < arr.length; i++) {
 
             while (!integerStack.isEmpty() && arr[integerStack.peek()] <= arr[i]) {
-                integerStack.pop(); // keep poping all the elements which are less or equal to current number in the stack
+                integerStack.pop(); // keep popping all the elements which are less or equal to current number in the stack
             }
             if (integerStack.isEmpty()) {
                 ans[i] = i + 1; // all the previous elements are smaller than this and include the current number
