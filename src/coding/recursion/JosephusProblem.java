@@ -26,7 +26,7 @@ public class JosephusProblem {
     private static int solveJosephusProblem( int index, int k, List<Integer> list) {
         // base condition
         if(list.size() == 1) {
-            return list.getFirst();
+            return list.get(0);
         }
         //Hypothesis -- Reducing the input.
 
