@@ -1,6 +1,6 @@
 package coding.linkedlistproblems;
 
-//https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/?ref=lbp
+//Reverse Nodes in k-Group
 public class ReverseAlternateKNodes {
 
 	public static void main(String[] args) {
@@ -16,6 +16,10 @@ public class ReverseAlternateKNodes {
 		l1.append(8);
 		l1.append(9);
 		l1.append(10);
+		l1.append(11);
+		l1.append(12);
+		l1.append(13);
+		l1.append(14);
 		l1.print();
 		System.out.println();
 		l1.reverse(3);
@@ -28,39 +32,6 @@ public class ReverseAlternateKNodes {
 
 class L11 {
 	Node11 head;
-
-	public void reverseIterative(int k) {
-
-		Node11 originalHead = null;
-		int i = 0;
-		Node11 curr = head;
-		while (curr !=null) {
-			Node11 prev = null;
-			Node11 next = null;
-			int count = 0;
-			while (curr != null && count < k) {
-				next = curr.next;
-				curr.next = prev;
-				prev = curr;
-				curr = next;
-				count++;
-			}
-
-			if (i == 0) {
-				originalHead = prev;// for safe keeping of the answer head.
-				head.next = curr;
-			} else {
-				head.next = prev; // in the second loop after reversing, there is no link with the curr and the existing linkedlist
-				prev.next.next = curr;
-			}
-			for (int j = 0; j < k && curr != null; j++) {
-				head = curr;
-				curr = curr.next;
-			}
-			i++;
-		}
-		head = originalHead;
-	}
 
 	static class Node11 {
 
@@ -101,13 +72,9 @@ class L11 {
 	}
 
 	public void reverse(int k) {
-		
-		//easier way
 		head = reverse1(head, k);
-		
-		//another way
-		//head = reverse2(head, k, true);
 	}
+
 
 	private Node11 reverse1(Node11 head, int k) {
 		

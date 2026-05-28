@@ -1,14 +1,12 @@
 package coding.stack;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Stack;
 
-//nearest element to the left
+//nearest greater element to the left
 public class NGL {
     public static void main(String[] args) {
-        int[] n = {1,3,2,4};
+        int[] n = {5, 3, 2, 4, 6};
         System.out.println(Arrays.toString(nearestElementToLeft(n)));
     }
 

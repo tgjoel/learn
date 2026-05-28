@@ -107,8 +107,8 @@ public class StringPrograms {
 //		String st2 = "terbottlewa";
 //		System.out.println(isStringRotation(st1, st2));
 
-		//String st11 = "abba";
-		//superReducedString(st11);
+		String st11 = "abba";
+		superReducedString(st11);
 
 		String st12 = "saveChangesInTheEditor";
 		camelCase(st12);

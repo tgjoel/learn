@@ -10,12 +10,13 @@ public class ContainerWithMostWater {
         System.out.println("Max area " + maxArea(height));
     }
     public static int maxArea(int[] height) {
-        int max = Integer.MIN_VALUE;
+        int maxArea = Integer.MIN_VALUE;
         for (int i = 0, j = height.length-1; i < j;) {
 
             int minHeight = Math.min(height[i], height[j]);
             int length = j -i;
-            max = Math.max(max, (minHeight * length));
+            int  currentArea = (minHeight * length);
+            maxArea = Math.max(maxArea, currentArea);
 
             if(height[i] < height[j]) {
                 i++;
@@ -23,7 +24,7 @@ public class ContainerWithMostWater {
                 j--;
             }
         }
-        return max;
+        return maxArea;
     }
 
     public void reverseString(char[] s) {

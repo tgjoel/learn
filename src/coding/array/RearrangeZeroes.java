@@ -43,4 +43,18 @@ public class RearrangeZeroes {
         System.out.println("Zeros in the front of the array");
         Arrays.stream(arr).forEach(a -> System.out.print(a +" "));
     }
+
+    private static void  printArray(int[] arr) {
+
+        for(int i = 0, j = 0; j < arr.length; j++) {
+            if(arr[j] != 0) {     ///  i gets the index of the 0 in the array, j iterates the array and swap with non zero value i
+                int tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
+                i++;
+            }
+        }
+
+
+    }
 }

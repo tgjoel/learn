@@ -2,6 +2,7 @@ package coding.stack;
 
 import java.util.Stack;
 
+//https://leetcode.com/problems/min-stack/description/
 public class MinStackWithoutExtraSpace {
 
     public static void main(String[] args) {
@@ -15,6 +16,7 @@ public class MinStackWithoutExtraSpace {
         System.out.println(minStack.getMin());
     }
 
+    /*
     static class MinStack1 {
         private Stack<Long> stack;
         private long min;
@@ -54,7 +56,7 @@ public class MinStackWithoutExtraSpace {
         public int getMin() {
             return (int) min;
         }
-    }
+    } */
 
 
     static class MinStack {

@@ -17,7 +17,7 @@ public class DetectAndRemoveLoop {
 		one.next = two;
 		two.next = three;
 		three.next = four;
-		four.next = two;	
+		four.next = three;
 		
 		linkedList4.print();
 		linkedList4.detectAndRemoveLoop(); 

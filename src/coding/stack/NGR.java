@@ -15,8 +15,8 @@ public class NGR {
     }
 
     private static int[] ngr(int[] nums) {
-        //int[] ans = new int[nums.length];
-        List<Integer> ans = new ArrayList<>();
+        int[] ans = new int[nums.length];
+       // List<Integer> ans = new ArrayList<>();
         Stack<Integer> intStack = new Stack<>();
 
         for (int i = nums.length - 1; i >= 0; i--) {   /// ---- O(n)
@@ -34,14 +34,17 @@ public class NGR {
             }
             // if we found an element greater than the current element, then that is the ans.
             if (!intStack.isEmpty()) {
-                ans.add(intStack.peek());
+              //  ans.add(intStack.peek());
+                ans[i] = intStack.peek();
             } else {
-                ans.add(-1); // adding -1 to the ans as the stack is empty
+               // ans.add(-1); // adding -1 to the ans as the stack is empty
+                ans[i]= -1;
             }
             // also need to push the current element to the stack, as it could be greater element to the next one
             intStack.push(nums[i]);
         }
-        return ans.reversed().stream().mapToInt(Integer::intValue).toArray();
+        //return ans.reversed().stream().mapToInt(Integer::intValue).toArray();
+        return ans;
     }
     /// ---- O(n) +  O(n) =  O(2n) ~ O(n)
 }

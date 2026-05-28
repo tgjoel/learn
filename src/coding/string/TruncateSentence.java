@@ -36,7 +36,7 @@ public class TruncateSentence {
 
     private static void problem1() {
         String s = "chopper is not a tanuki";
-        int k = 5;
+        int k = 3;
         int i = 0;
         for(; i <s.length() && k > 0;i++) {
             if(s.charAt(i) == ' ') k--;

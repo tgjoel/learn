@@ -10,20 +10,33 @@ public class RotateList {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
+        ListNode tmp =head;
+        while (tmp != null) {
+            System.out.print(tmp.val + " ");
+            tmp = tmp.next;
+        }
+        System.out.println();
+
 
         //   head = rotateRight(head, 2);
-        head = rotateRight1(head, 2);
+        head = rotateRight1(head, 2);  /// making it circular is correct
+      //  head = rotateRight11(head, 2); // won't work against large inputs
 
-        System.out.println(head);
+        tmp =head;
+        while (tmp != null) {
+            System.out.print(tmp.val + " ");
+            tmp = tmp.next;
+        }
 
     }
+
 
     public static ListNode rotateRight1(ListNode head, int k) {
         if (head == null || head.next == null || k == 0) return head;
 
         ListNode tmp = head;
         int length = 1;  //loop counts nodes starting from the second node. As the first node is already considered.
-        while(tmp.next != null) {
+        while(tmp.next != null) {  // this is the get the penultimate node  and the correct length
             tmp = tmp.next;
             length++;
         }
@@ -64,6 +77,26 @@ public class RotateList {
             tmp = first;
         }
         return first;
+    }
+
+    public static ListNode rotateRight11(ListNode head, int k) {
+        if(head == null || head.next == null || k == 0) return head;
+
+        ListNode curr = head;
+        ListNode prev = null;
+        int count = 0;
+
+        while(count < k) {
+            while (curr.next != null) {
+                prev = curr;
+                curr = curr.next;
+            }
+            count++;
+            curr.next = head;
+            head = curr;
+            prev.next = null;
+        }
+        return head;
     }
 
     public static class ListNode {
