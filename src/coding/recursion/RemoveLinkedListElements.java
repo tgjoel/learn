@@ -27,7 +27,7 @@ public class RemoveLinkedListElements {
         if(head == null) {
             return null;
         }
-        ListNode temp = head;
+        ListNode temp = head;  // reducing the input
         head = head.next;
         temp.next = removeElements(head, val);
         if(head.val == val) {  // kept here so will loop till the end of the list and then starts to check.

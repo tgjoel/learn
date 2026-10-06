@@ -3,7 +3,7 @@ package coding.heap;
 import java.util.*;
 
 //https://leetcode.com/problems/top-k-frequent-elements/description/
-public class KFrequentNumbers {
+public class KFrequentNumbers05 {
     public static void main(String[] args) {
         int[] arr = {1, 1, 1, 2, 2, 3};
         int k = 2;
@@ -26,6 +26,7 @@ public class KFrequentNumbers {
             frequencyMap.put(nums[i], frequencyMap.getOrDefault(nums[i], 0) + 1);
         }
         PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        //PriorityQueue<int[]> minHeap = new PriorityQueue<>((a,b) -> a[0] - b[0]);
         //(a,b) -> a[0] - b[0]
         // should be in the ascending order a[0] - b[0]
 
@@ -41,23 +42,18 @@ public class KFrequentNumbers {
         while (!minHeap.isEmpty()) {
             ans[index--] = minHeap.poll()[1];
         }
-        return ans;
 
-        /*
-        PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
+        // OR
+       // PriorityQueue<Integer> minHeap1 = new PriorityQueue<>((a,b) -> frequencyMap.get(a) - frequencyMap.get(b));
+        PriorityQueue<Integer> minHeap1 = new PriorityQueue<>(Comparator.comparingInt(frequencyMap::get));
 
-        frequencyMap.entrySet().forEach(entry -> {
-            minHeap.offer(entry);
-            if(minHeap.size() >  k) {
-                minHeap.poll();
+        frequencyMap.forEach((number, frequency) -> {
+            minHeap1.offer(number);
+            if (minHeap1.size() > k) {
+                minHeap1.poll();
             }
         });
 
-        int[] ans = new int[k];
-        int index = k-1;
-        while (!minHeap.isEmpty()) {
-            ans[index--] = minHeap.poll().getKey();
-        }
-         */
+        return ans;
     }
 }

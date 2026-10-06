@@ -3,7 +3,8 @@ package coding.queueproblems;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SortQueueWithoutExtraSpace {
+public class
+SortQueueWithoutExtraSpace {
 
 	public static void main(String[] args) {
 

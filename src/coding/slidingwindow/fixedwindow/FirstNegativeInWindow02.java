@@ -3,9 +3,9 @@ package coding.slidingwindow.fixedwindow;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstNegativeInWindow {
+public class FirstNegativeInWindow02 {
     public static void main( String[] args ) {
-        int[] nums = {-8, 2, 3, -6, 10};
+        int[] nums = {-8, -2, 3, -6, 10};
        // int[] nums = {-8, 2, 3, -6, 10};
         int k = 2;
 

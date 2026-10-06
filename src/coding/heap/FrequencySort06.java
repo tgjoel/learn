@@ -2,12 +2,12 @@ package coding.heap;
 
 import java.util.*;
 
-public class FrequencySort {
+public class FrequencySort06 {
     public static void main(String[] args) {
         int[] arr = {6,1,1,1,3,2,2,4};
 
         List<Integer> ans = frequencySort(arr);
-        ans.forEach(System.out::print);
+        ans.forEach(a-> System.out.print(a + " "));
     }
 
     private static List<Integer> frequencySort(int[] arr) {

@@ -2,7 +2,15 @@ package coding.heap;
 
 import java.util.PriorityQueue;
 
-public class ConnectRopesToMinimiseCost {
+/**
+You are given an array ropes[], where each value represents the length of a rope. You must connect all ropes into one rope.
+The cost of connecting two ropes is the sum of their lengths. Find the minimum possible total cost required to connect all ropes.
+
+ Time complexity: O(n log n)
+Space complexity: O(n)
+ */
+
+public class ConnectRopesToMinimiseCost08 {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
 

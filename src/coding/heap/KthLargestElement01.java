@@ -2,7 +2,7 @@ package coding.heap;
 
 import java.util.PriorityQueue;
 
-public class KthLargestElement {
+public class KthLargestElement01 {
     public static void main(String[] args) {
         int arr[] = {7,10,4,3,20,15,5,1};
         System.out.println(kthLargestElement(arr, 3));

@@ -4,7 +4,7 @@ package coding.heap;
 import java.util.*;
 
 /// https://leetcode.com/problems/find-k-closest-elements/description/
-public class KClosestNumbers {
+public class KClosestNumbers04 {
 
     public static void main(String[] args) {
 

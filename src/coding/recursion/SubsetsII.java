@@ -9,10 +9,20 @@ public class SubsetsII {
     public static void main( String[] args ) {
         int nums[] = {4,4,4,1,4};
         List<List<Integer>> powerSet =  printPowerSets(nums);
+        List<List<Integer>> powerSet1 =  printPowerSets2(nums);
         powerSet.forEach(System.out::println);
+        System.out.println("2nd method");
+        powerSet1.forEach(System.out::println);
     }
 
     private static List<List<Integer>> printPowerSets( int[] nums ) {
+        List<List<Integer>> powerSet = new ArrayList<>();
+        List<Integer> output = new ArrayList<>();
+        Arrays.sort(nums);
+        printPowerSets(nums, 0, output, powerSet);
+        return powerSet;
+    }
+    private static List<List<Integer>> printPowerSets2( int[] nums ) {
         List<List<Integer>> powerSet = new ArrayList<>();
         List<Integer> output = new ArrayList<>();
         Arrays.sort(nums);
@@ -27,12 +37,32 @@ public class SubsetsII {
             }
             return;
         }
-        List<Integer> output1 = new ArrayList<>(output); // not considering decision
-        List<Integer> output2 = new ArrayList<>(output);
+        List<Integer> output1 = new ArrayList<>(output);
+        List<Integer> output2 = new ArrayList<>(output);// not considering decision
         output1.add(nums[index]); // considering the input decision
 
         printPowerSets(nums, index + 1, output1, powerSet);
         printPowerSets(nums, index + 1, output2, powerSet);
+
+    }
+
+    private static void printPowerSets2( int[] nums, int index, List<Integer> output, List<List<Integer>> powerSet ) {
+        if(index == nums.length) {
+            powerSet.add(output);
+            return;
+        }
+        List<Integer> output1 = new ArrayList<>(output);
+        List<Integer> output2 = new ArrayList<>(output); // not considering decision
+
+        output1.add(nums[index]); // considering the input decision
+
+        printPowerSets2(nums, index + 1, output1, powerSet);
+
+        //as the array is sorted, can remove the repeated value
+        if(index +1 < nums.length && nums[index+1] == nums[index]) {
+            index++;
+        }
+        printPowerSets2(nums, index + 1, output2, powerSet);
 
     }
 }

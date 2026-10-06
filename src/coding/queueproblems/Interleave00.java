@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Interleave {
+public class Interleave00 {
 
 	//	Input : 11 12 13 14 15 16 17 18 19 20
 	//	Output : 11 16 12 17 13 18 14 19 15 20

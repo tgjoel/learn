@@ -4,7 +4,7 @@ package coding.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationWithSpaces {
+public class PermutationWithSpaces11 {
     public static void main( String[] args ) {
         String input = "abc";
         List<String> ans = solvePermutationWithSpaces(input);

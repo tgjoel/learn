@@ -61,17 +61,17 @@ class BinaryTree12 {
         return root;
     }
 
-    public void invertTreeIterative( Node12 root ) {
-        if(root == null) return;
+    public void invertTreeIterative(Node12 root) {
+        if (root == null) return;
         Queue<Node12> queue = new LinkedList<>();
         queue.add(root);
-        while(queue.size() > 0) {
+        while (queue.size() > 0) {
             Node12 currNode = queue.remove();
             Node12 temp = currNode.left;
             currNode.left = currNode.right;
             currNode.right = temp;
-            if(currNode.left != null) queue.add(currNode.left);
-            if(currNode.right != null) queue.add(currNode.right);
+            if (currNode.left != null) queue.add(currNode.left);
+            if (currNode.right != null) queue.add(currNode.right);
         }
 
     }
