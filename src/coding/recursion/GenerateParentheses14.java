@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 22. Generate Parentheses
-public class GenerateParentheses {
+public class GenerateParentheses14 {
 
     public static void main( String[] args ) {
         List<String> parentheses = solveGenerateParentheses(1);

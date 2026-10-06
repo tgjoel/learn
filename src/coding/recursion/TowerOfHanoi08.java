@@ -1,6 +1,6 @@
 package coding.recursion;
 
-public class TowerOfHanoi {
+public class TowerOfHanoi08 {
     static int  count = 0;
     public static void main( String[] args ) {
         int numberOfPlates = 3;

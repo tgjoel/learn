@@ -3,7 +3,7 @@ package coding.recursion;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PrintUniqueSubsetsOfString {
+public class PrintUniqueSubsetsOfString10 {
     public static void main( String[] args ) {
         String input = "aab";
         uniqueSubsets(input);
@@ -16,7 +16,7 @@ public class PrintUniqueSubsetsOfString {
         uniqueSubsets.forEach( System.out::println);
     }
     private static void uniqueSubsets( String input, String output, Set<String> uniqueSubsets ) {
-        if(input.length() == 0) {
+        if(input.isEmpty()) {
             uniqueSubsets.add(output);
             return;
         }

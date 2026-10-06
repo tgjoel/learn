@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //  Print N-bit binary numbers having more 1’s than 0’s for any prefix
-public class NBitBinaryNumbers {
+public class NBitBinaryNumbers15 {
     public static void main( String[] args ) {
         List<String> ansList = new ArrayList<>();
         ansList = solveNBitBinaryNumbers(5);

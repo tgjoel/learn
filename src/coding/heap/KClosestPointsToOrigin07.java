@@ -1,11 +1,8 @@
 package coding.heap;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.PriorityQueue;
 
-public class KClosestPointsToOrigin {
+public class KClosestPointsToOrigin07 {
 
     public static void main(String[] args) {
 

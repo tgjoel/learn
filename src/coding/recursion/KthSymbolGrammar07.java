@@ -2,7 +2,7 @@ package coding.recursion;
 
 
 //779. K-th Symbol in Grammar
-public class KthSymbolGrammar {
+public class KthSymbolGrammar07 {
     public static void main( String[] args ) {
         System.out.println(kthGrammar(4,6));  //  0 1 1 0 1 0 0 1. Ans: 0. which is the sixth element in the nth row
     }

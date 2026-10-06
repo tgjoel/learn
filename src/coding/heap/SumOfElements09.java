@@ -2,7 +2,7 @@ package coding.heap;
 
 import java.util.PriorityQueue;
 
-public class SumOfElements {
+public class SumOfElements09 {
 
     // find the Sum of Elements between k1 smallest and k2 smallest numbers
 

@@ -3,7 +3,7 @@ package coding.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationWithCaseChange {
+public class PermutationWithCaseChange12 {
     public static void main( String[] args ) {
         String input = "aBC";
         List<String> ans = solvePermutationWithCaseChange(input);

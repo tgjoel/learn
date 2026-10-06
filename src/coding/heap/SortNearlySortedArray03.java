@@ -3,7 +3,10 @@ package coding.heap;
 import java.util.PriorityQueue;
 
 /// Also known as Sort a K Sorted Array
-public class SortNearlySortedArray {
+/// A K-Sorted Array is an array where every element is at most k positions away from its correct position in the sorted order.
+/// Time:  O(n log k)
+/// Space: O(k)
+public class SortNearlySortedArray03 {
 
     public static void main(String[] args) {
         int[] arr = {5, 6, 2, 3, 8, 10, 9};

@@ -2,7 +2,7 @@ package coding.recursion;
 
 import java.util.Stack;
 
-public class SortStackRecursion {
+public class SortStackRecursion03 {
     public static void main( String[] args ) {
         Stack<Integer> stack = new Stack<>();
         stack.push(3);

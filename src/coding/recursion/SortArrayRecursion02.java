@@ -1,12 +1,11 @@
 package coding.recursion;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class SortArrayRecursion {
+public class SortArrayRecursion02 {
     public static void main( String[] args ) {
         int[] input = new int[]{3,1,5,2,9,0};
         //converting the array to list

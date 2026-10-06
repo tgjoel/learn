@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 //LeetCode: 239
-public class MaxOfAllSubarrays {
+public class MaxOfAllSubarrays04 {
 
     public static void main( String[] args ) {
 

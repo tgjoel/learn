@@ -3,7 +3,7 @@ package coding.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LetterCasePermutation {
+public class LetterCasePermutation13 {
     public static void main( String[] args ) {
         String s = "3a1b2";
         letterCasePermutation(s).forEach(System.out::println); // with character array and index.
@@ -33,6 +33,25 @@ public class LetterCasePermutation {
             letterCasePermutation(s, index + 1, output2, result);
         }
     }
+
+    /*
+    static void solve(String input, String output, List<String> result) {
+    if (input.isEmpty()) {
+        result.add(output);
+        return;
+    }
+
+    char ch = input.charAt(0);
+    String remaining = input.substring(1);
+
+    if (Character.isDigit(ch)) {
+        solve(remaining, output + ch, result);
+    } else {
+        solve(remaining, output + Character.toLowerCase(ch), result);
+        solve(remaining, output + Character.toUpperCase(ch), result);
+    }
+}
+     */
 
     public static List<String> letterCasePermutation1(String s) {
         List<String> result = new ArrayList<>();

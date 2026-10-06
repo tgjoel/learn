@@ -9,7 +9,7 @@ Question variation
  */
 
 
-public class PrintSubsetsOfString {
+public class PrintSubsetsOfString09 {
     public static void main( String[] args ) {
         String input = "ab";
         String output = "";

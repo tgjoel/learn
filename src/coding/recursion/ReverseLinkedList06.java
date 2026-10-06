@@ -1,6 +1,6 @@
 package coding.recursion;
 
-public class ReverseLinkedList {
+public class ReverseLinkedList06 {
     public static void main( String[] args ) {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(2);

@@ -6,7 +6,7 @@ import java.util.List;
 
 // Game of Death in a circle | Execution in Circle
 //LC 1823. Find the Winner of the Circular Game
-public class JosephusProblem {
+public class JosephusProblem16 {
 
     public static void main( String[] args ) {
         int n = 5, k = 2;
